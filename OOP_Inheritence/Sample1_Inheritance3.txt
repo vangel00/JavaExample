@@ -1,0 +1,85 @@
+package OOP_Inheritance;
+
+import java.util.Scanner;
+
+interface Sum {// parent interface
+	
+	public abstract int Sum1(int a , int b);
+
+	public abstract double Sum2(double a , int b);
+	
+	public abstract double Sum3(int a , double b);
+	
+	public abstract double Sum4(double a , double b);
+
+	
+}
+
+public class Sample1_Inheritance3 implements Sum {// child class
+	static int n1;
+	static int n2;
+	@Override
+	public int Sum1(int a , int b) {
+		 int sum = a + b;
+		
+		return sum;
+		
+	}
+	@Override
+	public double Sum2(double a , int b) {
+		double sum = a - b;
+		
+		return sum;
+		
+	}
+	@Override
+	public double Sum3(int a , double b) {
+		double sum = a * b;
+		
+		return sum;
+		
+	}
+	@Override
+	public double Sum4(double a , double b) {
+		 double sum = a / b;
+		
+		 return sum;
+		
+	}
+	
+	
+	
+	
+	
+
+
+	public static void main(String[] args) {
+	// 이름과 나이를ㄹ 입력받아서 상속을 이요아여 처리하고 출력해보세요.	
+		Scanner sc = new Scanner(System.in);
+		System.out.println("숫자 1을 입력하세요");
+
+		int n1 = sc.nextInt();
+		
+		System.out.println("숫자 2을 입력하세요");
+		
+		int n2 = sc.nextInt();
+		
+		Sample1_Inheritance3 si2 = new Sample1_Inheritance3();
+		
+		int sum1 = si2.Sum1(n1 , n2);
+		double sum2 = si2.Sum2(n1 , n2);
+		double sum3 = si2.Sum3(n1 , n2);
+		double sum4 = si2.Sum4(n1 , n2);
+		
+		
+		System.out.println(sum1); // 이름과 나이 출력
+		System.out.println(sum2);
+		System.out.println(sum3);
+		System.out.println(sum4);
+	}
+
+	
+
+}
+
+}
